@@ -1,0 +1,5 @@
+[hab-static-website]
+plan_path = "website/habitat"
+
+[hab-static-server]
+plan_path = "server/habitat"
