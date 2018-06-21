@@ -3,4 +3,4 @@
 while true
 do
   sleep 86400
-end
+done
