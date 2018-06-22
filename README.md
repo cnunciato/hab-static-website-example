@@ -1,6 +1,6 @@
 # hab-static-website-example
 
-This is an example of one way to package and deliver a static website with [Habitat](https://habitat.sh/) and have it managed indepedently by the Habitat Supervisor.
+This is an example of one way to package and deliver a static website with [Habitat](https://habitat.sh/) and have it managed independently by the Habitat Supervisor.
 
 It assumes a little knowledge of Habitat, so if you don't yet have that, [take a look at a few demos](https://habitat.sh/learn/) to get a sense of how things work, then come back here when you're ready.
 
@@ -14,7 +14,7 @@ This has prompted some users (including us, in some cases) to combine the websit
 
 ## A Solution
 
-This repo contains two Habitat plans: one for a web server, and one for a website. The website package contains only an `index.html` file (representing our static website), and the server package extends Habitat's `core/nginx` package by setting some configuration defaults and exposing a configurable docroot. Both packages run as services under the Habitat Supervisor, which allows them to be updated automatically using Habitat's built-in support for update strategies.
+This repo contains two Habitat plans: one for a web server, and one for a website. The website package contains only an `index.html` file (representing our static website), and the server package extends Habitat's `core/nginx` package by setting some configuration defaults and exposing a configurable docroot. Both packages run as services under the Habitat Supervisor, which allows them to be updated automatically using Habitat's built-in support for [update strategies](https://www.habitat.sh/docs/using-habitat/#update-strategy).
 
 When a commit is made to the website package (assuming it's connected to Builder), a package is produced containing only the website, and when the package is promoted to `stable`, the Supervisor detects it, installs it, and the already-running web server picks up its changes automatically without having to be restarted.
 
