@@ -20,7 +20,7 @@ When a commit is made to the website package (assuming it's connected to Builder
 
 ### Wait &mdash; the static website runs as a service?
 
-Yes &mdash; that's the trick. If we want to get all that goodness from the Supervisor (which again only manages _services_), we need to augment the website package in a way that allows it to "run" as a process. We do that, basically, with a [run hook]() that `sleep`s indefinitely:
+Yes &mdash; that's the trick. If we want to get all that goodness from the Supervisor (which again only manages _services_), we need to augment the website package in a way that allows it to "run" as a process. We do that, basically, with a [run hook](https://www.habitat.sh/docs/reference/#hooks) that `sleep`s indefinitely:
 
 ```
 # website/habitat/hooks/run
