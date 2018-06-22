@@ -72,6 +72,8 @@ sudo hab svc load cnunciato/hab-static-server --strategy at-once
 sudo journalctl -fu hab-sup
 ```
 
+You should also be able to browse to the website at http://localhost.
+
 ## Author
 
 Christian Nunciato (chris@nunciato.org)
